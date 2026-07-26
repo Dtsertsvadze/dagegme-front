@@ -1,4 +1,4 @@
-import { apiBaseUrl, getApiOrigin } from '../config/api.js'
+import { apiBaseUrl } from '../config/api.js'
 import { homeCategories } from '../content/home-categories.js'
 
 const LINK_CATEGORY_IDS = new Set([
@@ -7,18 +7,6 @@ const LINK_CATEGORY_IDS = new Set([
   'photographers',
   'videographers',
 ])
-
-function buildMediaUrl(path) {
-  if (!path) {
-    return ''
-  }
-
-  if (/^https?:\/\//i.test(path)) {
-    return path
-  }
-
-  return `${getApiOrigin()}/storage/${path.replace(/^\/+/, '')}`
-}
 
 function normalizeLinks(links) {
   if (typeof links === 'string') {
@@ -84,14 +72,7 @@ function normalizePhotos(photos) {
   }
 
   return photos
-    .map((photo) => {
-      const path =
-        typeof photo === 'string'
-          ? photo
-          : photo?.photo_path || photo?.path || photo?.url
-
-      return buildMediaUrl(path)
-    })
+    .map((photo) => photo?.photo_url)
     .filter(Boolean)
 }
 
@@ -107,7 +88,7 @@ function normalizeListing(category, item) {
     title: normalizeTitle(category, item),
     description: normalizeDescription(category, item),
     city: normalizeLocalizedField(item, 'city'),
-    imageUrl: buildMediaUrl(item.profile_photo),
+    imageUrl: item.profile_photo_url || '',
     href: links[0] || '',
     links,
     vip: Boolean(item.vip),

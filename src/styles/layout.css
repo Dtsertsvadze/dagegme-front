@@ -1,0 +1,21 @@
+.app-shell {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.page-shell {
+  width: min(1240px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+.home-page {
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 20px, 1240px);
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,63 @@
+import { ListingGrid } from '../components/home/listing-grid.jsx'
+import { siteCopy } from '../content/site-copy.js'
+import { useHomeListings } from '../hooks/use-home-listings.js'
+import { useAppPreferences } from '../state/app-preferences.js'
+import { getLocalizedValue } from '../utils/get-localized-value.js'
+
+export function ProfessionalsPage() {
+  const { language } = useAppPreferences()
+  const copy = siteCopy[language].professionals
+  const { categories, items, isLoading, error } = useHomeListings()
+
+  return (
+    <div className="professionals-page">
+      <header className="professionals-hero">
+        <p className="professionals-hero__eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p className="professionals-hero__text">{copy.text}</p>
+        <span className="professionals-hero__accent" aria-hidden="true"></span>
+      </header>
+
+      {isLoading ? (
+        <div className="feedback-card professionals-page__feedback">
+          {copy.loading}
+        </div>
+      ) : null}
+
+      {!isLoading && error ? (
+        <div className="feedback-card professionals-page__feedback">
+          {copy.error}
+        </div>
+      ) : null}
+
+      {!isLoading && !error ? (
+        <div className="professionals-rows">
+          {categories.map((category) => {
+            const categoryItems = items
+              .filter((item) => item.categoryId === category.id)
+              .sort((leftItem, rightItem) =>
+                getLocalizedValue(leftItem.title, language).localeCompare(
+                  getLocalizedValue(rightItem.title, language),
+                  language,
+                ),
+              )
+
+            return (
+              <ListingGrid
+                key={category.id}
+                className="professionals-row"
+                title={copy.categoryTitles[category.id] || category.labels[language]}
+                seeAllHref={`/professionals/${category.id}`}
+                items={categoryItems}
+                activeCategory=""
+                isLoading={false}
+                error=""
+                language={language}
+              />
+            )
+          })}
+        </div>
+      ) : null}
+    </div>
+  )
+}

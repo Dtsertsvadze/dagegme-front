@@ -39,7 +39,7 @@ export const siteCopy = {
     processSteps: [
       { icon: "search", title: "Choose a category" },
       { icon: "shortlist", title: "Find professionals and make your choice" },
-      { icon: "chat", title: "Contact us and book +995 551 28 84 83" },
+      { icon: "chat", title: "Contact us and book +995 555 50 00 19" },
       { icon: "celebrate", title: "Enjoy your event" },
     ],
     about: {
@@ -79,7 +79,8 @@ export const siteCopy = {
         { label: "About us", href: "/#about" },
       ],
       calloutTitle: "Your celebration starts here",
-      calloutText: "Find the professionals you want and save all your favorites.",
+      calloutText:
+        "Find the professionals you want and save all your favorites.",
       calloutAction: "View categories",
       note: "Created for unforgettable moments.",
     },
@@ -149,7 +150,7 @@ export const siteCopy = {
     processSteps: [
       { icon: "search", title: "აირჩიე კატეგორია" },
       { icon: "shortlist", title: "მოიძიე პროფესიონალები და აარჩიე" },
-      { icon: "chat", title: "დაგვიკავშირდი და დაჯავშნე +995 551 28 84 83" },
+      { icon: "chat", title: "დაგვიკავშირდი და დაჯავშნე +995 555 50 00 19" },
       { icon: "celebrate", title: "ისიამოვნე ღონისძიებით" },
     ],
     about: {

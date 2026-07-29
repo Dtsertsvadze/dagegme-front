@@ -21,14 +21,6 @@
   color: #ffffff;
 }
 
-.hero__eyebrow {
-  margin: 0 0 20px;
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
-}
-
 .hero__title {
   margin: 0;
   font-size: clamp(3.4rem, 5vw, 5.2rem);

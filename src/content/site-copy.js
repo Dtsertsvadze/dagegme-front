@@ -31,7 +31,6 @@ export const siteCopy = {
       previousPhoto: "Previous photo",
       nextPhoto: "Next photo",
     },
-    heroEyebrow: "Dagegme.ge",
     heroTitleTop: "Plan your ideal",
     heroTitleAccent: "wedding beautifully",
     heroText:
@@ -48,7 +47,6 @@ export const siteCopy = {
       title: "A beautiful celebration starts with a calmer way to plan",
       text: "Dagegme brings the people, places, and details behind a memorable event into one thoughtful space. Explore at your own pace, save what feels right, and build a celebration that truly feels like yours.",
       statement: "Less searching. More celebrating.",
-      tags: ["People", "Places", "Moments"],
       values: [
         {
           icon: "people",
@@ -144,49 +142,47 @@ export const siteCopy = {
       previousPhoto: "წინა ფოტო",
       nextPhoto: "შემდეგი ფოტო",
     },
-    heroEyebrow: "Dagegme.ge",
     heroTitleTop: "დაგეგმე იდეალური",
-    heroTitleAccent: "ქორწილი მარტივად",
+    heroTitleAccent: "დღესასწაული მარტივად",
     heroText:
-      "იპოვე ფოტოგრაფი, ვიდეოგრაფი, ბენდი, დარბაზი და სხვა პროფესიონალები შენი ღონისძიებისთვის.",
+      "იპოვე ფოტოგრაფი, ვიდეოგრაფი, ბენდი და სხვა პროფესიონალები შენი ღონისძიებისთვის.",
     processTitle: "როგორ მუშაობს",
     processSteps: [
       { icon: "search", title: "აირჩიე კატეგორია" },
       { icon: "shortlist", title: "მოიძიე პროფესიონალები და აარჩიე" },
-      { icon: "chat", title: "დაგვიკავშირდი და დაჯავშნე +99551288483" },
+      { icon: "chat", title: "დაგვიკავშირდი და დაჯავშნე +995 551 28 84 83" },
       { icon: "celebrate", title: "ისიამოვნე ღონისძიებით" },
     ],
     about: {
-      eyebrow: "Dagegme-ს შესახებ",
-      title: "ლამაზი დღესასწაული მშვიდი დაგეგმვით იწყება",
-      text: "Dagegme ერთ სივრცეში აერთიანებს ადამიანებს, ადგილებსა და დეტალებს, რომლებიც დაუვიწყარ ღონისძიებას ქმნის. დაათვალიერე შენს რიტმში, შეინახე რაც მოგწონს და შექმენი დღე, რომელიც ნამდვილად შენია.",
+      eyebrow: "დაგეგმეს შესახებ",
+      title: "ერთი პლატფორმა — ყველა შენი გეგმისთვის",
+      text: "დაჯავშნე შენთვის სასურველი მომსახურება მარტივად და სწრაფად.",
       statement: "ნაკლები ძიება. მეტი ზეიმი.",
-      tags: ["ადამიანები", "ადგილები", "მომენტები"],
       values: [
         {
+          icon: "calendar",
+          title: "ყველა მნიშვნელოვანი ღონისძიებისთვის",
+          text: "იპოვე ქორწილისთვის, დაბადების დღისთვის, კორპორატიული თუ სხვა მნიშვნელოვანი ღონისძიებისთვის საჭირო სერვისები.",
+        },
+        {
           icon: "people",
-          title: "გამორჩეული პროფესიონალები",
-          text: "აღმოაჩინე ნიჭიერი ადამიანები ყველა საჭირო კატეგორიაში.",
+          title: "მომსახურების ფართო არჩევანი",
+          text: "ვიდეოგრაფები, ფოტოგრაფები, ბენდები, DJ-ები, წამყვანები, პოდკასტების ჩაწერა და ფოტოსესიები.",
         },
         {
-          icon: "place",
-          title: "ყველაფერი ერთ სივრცეში",
-          text: "შეინახე არჩევანი და დაგეგმვის პროცესი მარტივი გახადე.",
-        },
-        {
-          icon: "heart",
-          title: "შექმნილი შენი დღისთვის",
-          text: "აირჩიე დეტალები, რომლებიც შენს ისტორიას და გემოვნებას ერგება.",
+          icon: "car",
+          title: "ავტომობილის დაქირავება",
+          text: "ამავე პლატფორმიდან სწრაფად და მარტივად იქირავე ავტომობილი შენი დღესასწაულისთვის.",
         },
       ],
     },
     contact: {
       eyebrow: "კონტაქტი",
-      title: "მოგვიყევი შენი დღესასწაულის შესახებ",
+      title: "დაგვიკავშირდით თქვენი დღესასწაულის დასაგეგმად",
     },
     footer: {
       tagline:
-        "ერთი სივრცე, სადაც შენი მნიშვნელოვანი დღის პროფესიონალებსა და განსაკუთრებულ დეტალებს აღმოაჩენ.",
+        "ერთი სივრცე, სადაც ყველა იდეა რეალობად იქცევა მარტივად და სწრაფად. იპოვე და დაჯავშნე ყველაფერი რაც შენი იდეალური დღისთვის გჭირდება.",
       navigationLabel: "აღმოაჩინე",
       links: [
         { label: "კატეგორიები", href: "/#categories" },
@@ -209,7 +205,7 @@ export const siteCopy = {
         photographers: "ფოტოგრაფები",
         videographers: "ვიდეოგრაფები",
         bands: "ბენდები",
-        djs: "დიჯეები",
+        djs: "DJs",
         presenters: "წამყვანები",
         halls: "დარბაზები",
         "rental-cars": "გასაქირავებელი მანქანები",

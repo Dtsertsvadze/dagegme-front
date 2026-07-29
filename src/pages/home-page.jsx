@@ -26,7 +26,6 @@ export function HomePage() {
   return (
     <div className="home-page">
       <HeroSection
-        eyebrow={copy.heroEyebrow}
         titleTop={copy.heroTitleTop}
         titleAccent={copy.heroTitleAccent}
         text={copy.heroText}

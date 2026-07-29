@@ -42,6 +42,10 @@ export function ProfessionalsPage() {
                 ),
               )
 
+            if (categoryItems.length === 0) {
+              return null
+            }
+
             return (
               <ListingGrid
                 key={category.id}

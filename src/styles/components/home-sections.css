@@ -574,33 +574,45 @@
   height: 66px;
 }
 
-.about-section__tag {
+.about-section__orbit-icon {
   position: absolute;
   z-index: 2;
-  padding: 8px 13px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.13);
-  font-size: 0.78rem;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 14px 32px rgba(19, 7, 35, 0.2);
   backdrop-filter: blur(10px);
 }
 
-.about-section__tag--1 {
-  top: 18%;
-  left: 10%;
-  transform: rotate(-6deg);
+.about-section__orbit-icon svg {
+  width: 23px;
+  height: 23px;
 }
 
-.about-section__tag--2 {
-  top: 24%;
-  right: 8%;
-  transform: rotate(5deg);
+.about-section__orbit-icon--top {
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.about-section__tag--3 {
-  left: 12%;
-  bottom: 24%;
-  transform: rotate(4deg);
+.about-section__orbit-icon--right {
+  top: 43%;
+  right: 7%;
+}
+
+.about-section__orbit-icon--left {
+  top: 48%;
+  left: 7%;
+}
+
+.about-section__orbit-icon--bottom {
+  bottom: 7%;
+  left: 46%;
+  transform: translateX(-50%);
 }
 
 .about-section__statement {
@@ -923,6 +935,32 @@
   .about-section__mark svg {
     width: 54px;
     height: 54px;
+  }
+
+  .about-section__orbit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .about-section__orbit-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-section__orbit-icon--top {
+    top: 1%;
+  }
+
+  .about-section__orbit-icon--right {
+    right: 0;
+  }
+
+  .about-section__orbit-icon--left {
+    left: 0;
+  }
+
+  .about-section__orbit-icon--bottom {
+    bottom: 1%;
   }
 
   .about-section__content {

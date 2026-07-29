@@ -44,7 +44,7 @@ export function SiteFooter() {
       </div>
 
       <div className="site-footer__bottom">
-        <p>© {year} Dagegme.ge</p>
+        <p>© {year} dagegme.com</p>
         <p>{copy.footer.note}</p>
       </div>
     </footer>

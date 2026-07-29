@@ -1,5 +1,12 @@
 function ValueIcon({ icon }) {
   const paths = {
+    calendar: (
+      <>
+        <rect x="3" y="5" width="18" height="16" rx="3" />
+        <path d="M8 3v4M16 3v4M3 10h18" />
+        <path d="M8 14h2M14 14h2M8 17h2M14 17h2" />
+      </>
+    ),
     people: (
       <>
         <circle cx="9" cy="8" r="3" />
@@ -16,6 +23,13 @@ function ValueIcon({ icon }) {
     ),
     heart: (
       <path d="M12 20.5s-7-4.3-9-8a5.2 5.2 0 0 1 9-5.2a5.2 5.2 0 0 1 9 5.2c-2 3.7-9 8-9 8Z" />
+    ),
+    car: (
+      <>
+        <path d="M4 13l2.5-5h11l2.5 5v5H4v-5Z" />
+        <path d="M4 13h16M7 13h.01M17 13h.01" />
+        <path d="M6 18v2M18 18v2" />
+      </>
     ),
   }
 
@@ -41,6 +55,46 @@ function CelebrationMark() {
   )
 }
 
+function OrbitIcon({ icon, position }) {
+  const paths = {
+    camera: (
+      <>
+        <path d="M4 8h4l1.5-2h5L16 8h4v11H4V8Z" />
+        <circle cx="12" cy="13.5" r="3.5" />
+      </>
+    ),
+    music: (
+      <>
+        <path d="M9 18V6l9-2v12" />
+        <circle cx="6.5" cy="18" r="2.5" />
+        <circle cx="15.5" cy="16" r="2.5" />
+      </>
+    ),
+    microphone: (
+      <>
+        <rect x="9" y="3" width="6" height="11" rx="3" />
+        <path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" />
+      </>
+    ),
+    car: (
+      <>
+        <path d="M4 13l2.5-5h11l2.5 5v5H4v-5Z" />
+        <path d="M4 13h16M6 18v2M18 18v2" />
+      </>
+    ),
+  }
+
+  return (
+    <span
+      className={`about-section__orbit-icon about-section__orbit-icon--${position}`}
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+        {paths[icon]}
+      </svg>
+    </span>
+  )
+}
+
 export function AboutSection({ content }) {
   return (
     <section id="about" className="home-section about-section" aria-labelledby="about-title">
@@ -50,14 +104,10 @@ export function AboutSection({ content }) {
         <div className="about-section__mark">
           <CelebrationMark />
         </div>
-        {content.tags.map((tag, index) => (
-          <span
-            key={tag}
-            className={`about-section__tag about-section__tag--${index + 1}`}
-          >
-            {tag}
-          </span>
-        ))}
+        <OrbitIcon icon="camera" position="top" />
+        <OrbitIcon icon="music" position="right" />
+        <OrbitIcon icon="microphone" position="left" />
+        <OrbitIcon icon="car" position="bottom" />
         <p className="about-section__statement">{content.statement}</p>
       </div>
 

@@ -6,6 +6,8 @@ import {
   THEMES,
 } from './app-preferences.js'
 
+const LANGUAGE_PREFERENCE_VERSION = 'georgian-default-v1'
+
 function getInitialTheme() {
   if (typeof window === 'undefined') {
     return THEMES.LIGHT
@@ -24,7 +26,15 @@ function getInitialTheme() {
 
 function getInitialLanguage() {
   if (typeof window === 'undefined') {
-    return LANGUAGES.ENGLISH
+    return LANGUAGES.GEORGIAN
+  }
+
+  const storedLanguageVersion = window.localStorage.getItem(
+    STORAGE_KEYS.languageVersion,
+  )
+
+  if (storedLanguageVersion !== LANGUAGE_PREFERENCE_VERSION) {
+    return LANGUAGES.GEORGIAN
   }
 
   const storedLanguage = window.localStorage.getItem(STORAGE_KEYS.language)
@@ -36,7 +46,7 @@ function getInitialLanguage() {
     return storedLanguage
   }
 
-  return LANGUAGES.ENGLISH
+  return LANGUAGES.GEORGIAN
 }
 
 function getInitialWishlist() {
@@ -83,6 +93,10 @@ export function AppProvider({ children }) {
     document.documentElement.lang = language
     document.documentElement.dataset.language = language
     window.localStorage.setItem(STORAGE_KEYS.language, language)
+    window.localStorage.setItem(
+      STORAGE_KEYS.languageVersion,
+      LANGUAGE_PREFERENCE_VERSION,
+    )
   }, [language])
 
   useEffect(() => {

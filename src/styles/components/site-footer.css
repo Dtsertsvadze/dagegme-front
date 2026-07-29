@@ -35,10 +35,6 @@
   color: #ffffff;
 }
 
-.site-footer .brand-name::after {
-  color: #b999ff;
-}
-
 .site-footer__brand > p {
   max-width: 40ch;
   margin: 20px 0 0;

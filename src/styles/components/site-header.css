@@ -68,11 +68,6 @@
   letter-spacing: -0.04em;
 }
 
-.brand-name::after {
-  content: '.ge';
-  color: var(--color-accent);
-}
-
 .site-nav {
   display: flex;
   align-items: center;

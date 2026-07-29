@@ -17,7 +17,7 @@ export function ContactSection({ content }) {
         <span className="contact-section__phone-icon" aria-hidden="true">
           <PhoneIcon />
         </span>
-        <span>+995 551 28 84 83</span>
+        <span>+995 555 50 00 19</span>
       </a>
     </section>
   )

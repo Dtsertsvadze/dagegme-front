@@ -594,25 +594,35 @@
 }
 
 .about-section__orbit-icon--top {
-  top: 8%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 12%;
+  left: 28%;
+  width: 52px;
+  height: 52px;
+  transform: rotate(-9deg);
 }
 
 .about-section__orbit-icon--right {
-  top: 43%;
-  right: 7%;
+  top: 25%;
+  right: 8%;
+  width: 44px;
+  height: 44px;
+  transform: rotate(8deg);
 }
 
 .about-section__orbit-icon--left {
-  top: 48%;
-  left: 7%;
+  top: 57%;
+  left: 9%;
+  width: 46px;
+  height: 46px;
+  transform: rotate(-7deg);
 }
 
 .about-section__orbit-icon--bottom {
-  bottom: 7%;
-  left: 46%;
-  transform: translateX(-50%);
+  bottom: 10%;
+  left: 31%;
+  width: 50px;
+  height: 50px;
+  transform: rotate(6deg);
 }
 
 .about-section__statement {
@@ -620,7 +630,7 @@
   z-index: 2;
   right: 8%;
   bottom: 8%;
-  max-width: 12ch;
+  max-width: 13ch;
   margin: 0;
   font-size: clamp(1.2rem, 2vw, 1.7rem);
   font-weight: 700;
@@ -948,19 +958,23 @@
   }
 
   .about-section__orbit-icon--top {
-    top: 1%;
+    top: 7%;
+    left: 22%;
   }
 
   .about-section__orbit-icon--right {
-    right: 0;
+    top: 22%;
+    right: 2%;
   }
 
   .about-section__orbit-icon--left {
-    left: 0;
+    top: 54%;
+    left: 1%;
   }
 
   .about-section__orbit-icon--bottom {
-    bottom: 1%;
+    bottom: 3%;
+    left: 18%;
   }
 
   .about-section__content {

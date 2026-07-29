@@ -32,46 +32,46 @@ export const siteCopy = {
       nextPhoto: "Next photo",
     },
     heroTitleTop: "Plan your ideal",
-    heroTitleAccent: "wedding beautifully",
+    heroTitleAccent: "celebration with ease",
     heroText:
-      "Find photographers, videographers, halls, bands, and trusted professionals for your special day.",
+      "Find a photographer, videographer, band, and other professionals for your event.",
     processTitle: "How it works",
     processSteps: [
-      { icon: "search", title: "Find the service you need" },
-      { icon: "shortlist", title: "Compare professionals" },
-      { icon: "chat", title: "Message and choose easily" },
+      { icon: "search", title: "Choose a category" },
+      { icon: "shortlist", title: "Find professionals and make your choice" },
+      { icon: "chat", title: "Contact us and book +995 551 28 84 83" },
       { icon: "celebrate", title: "Enjoy your event" },
     ],
     about: {
       eyebrow: "About Dagegme",
-      title: "A beautiful celebration starts with a calmer way to plan",
-      text: "Dagegme brings the people, places, and details behind a memorable event into one thoughtful space. Explore at your own pace, save what feels right, and build a celebration that truly feels like yours.",
-      statement: "Less searching. More celebrating.",
+      title: "One platform — for all your plans",
+      text: "Book the service you want easily and quickly.",
+      statement: "Every important date begins with stress-free planning.",
       values: [
         {
+          icon: "calendar",
+          title: "For every important event",
+          text: "Find the services you need for a wedding, birthday, corporate event, or any other important occasion.",
+        },
+        {
           icon: "people",
-          title: "Inspiring professionals",
-          text: "Discover talented people across every essential category.",
+          title: "A wide range of services",
+          text: "Videographers, photographers, bands, DJs, presenters, podcast recording, and photo shoots.",
         },
         {
-          icon: "place",
-          title: "Everything in one place",
-          text: "Keep your options close and your planning beautifully simple.",
-        },
-        {
-          icon: "heart",
-          title: "Made for your day",
-          text: "Choose the details that match your story, taste, and vision.",
+          icon: "car",
+          title: "Car rental",
+          text: "Rent a car for your celebration quickly and easily through the same platform.",
         },
       ],
     },
     contact: {
       eyebrow: "Contact",
-      title: "Let’s talk about your celebration",
+      title: "Contact us to plan your celebration",
     },
     footer: {
       tagline:
-        "A thoughtful place to discover the people and details behind your most meaningful celebrations.",
+        "One place where every idea becomes reality, simply and quickly. Find and book everything you need for your perfect day.",
       navigationLabel: "Explore",
       links: [
         { label: "Categories", href: "/#categories" },
@@ -79,15 +79,14 @@ export const siteCopy = {
         { label: "About us", href: "/#about" },
       ],
       calloutTitle: "Your celebration starts here",
-      calloutText:
-        "Find the right professionals and keep every favorite close.",
-      calloutAction: "Explore categories",
-      note: "Made for moments worth remembering.",
+      calloutText: "Find the professionals you want and save all your favorites.",
+      calloutAction: "View categories",
+      note: "Created for unforgettable moments.",
     },
     professionals: {
-      eyebrow: "Explore the community",
+      eyebrow: "Discover our space",
       title: "Everything you need, all in one place",
-      text: "Browse every professional and service by category. Swipe through each collection, save your favorites, and shape the celebration you have in mind.",
+      text: "Browse all professionals and services by category. Swipe through the collections, save your favorites, and create the celebration you want.",
       loading: "Loading professionals...",
       error:
         "We could not load the professionals right now. Please try again shortly.",
@@ -102,11 +101,11 @@ export const siteCopy = {
       },
       categoryPage: {
         back: "All professionals",
-        subtitle: "Explore every option and save the ones that feel right.",
+        subtitle: "Browse every option and save your favorites.",
         cityLabel: "Filter by city",
         allCities: "All cities",
         results: "{count} results",
-        empty: "No professionals match this city yet.",
+        empty: "No professionals have been found in this city yet.",
       },
     },
   },
@@ -157,7 +156,7 @@ export const siteCopy = {
       eyebrow: "დაგეგმეს შესახებ",
       title: "ერთი პლატფორმა — ყველა შენი გეგმისთვის",
       text: "დაჯავშნე შენთვის სასურველი მომსახურება მარტივად და სწრაფად.",
-      statement: "ნაკლები ძიება. მეტი ზეიმი.",
+      statement: "მნიშვნელოვანი თარიღი მშვიდი დაგეგმვით იწყება.",
       values: [
         {
           icon: "calendar",

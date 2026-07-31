@@ -56,7 +56,7 @@ export const siteCopy = {
         {
           icon: "people",
           title: "A wide range of services",
-          text: "Videographers, photographers, bands, DJs, presenters, podcast recording, and photo shoots.",
+          text: "Videographers, photographers, bands, DJ, presenters, podcast recording, and photo shoots.",
         },
         {
           icon: "car",
@@ -95,7 +95,7 @@ export const siteCopy = {
         photographers: "Photographers",
         videographers: "Videographers",
         bands: "Bands",
-        djs: "DJs",
+        djs: "DJ",
         presenters: "Presenters",
         halls: "Halls",
         "rental-cars": "Rental cars",
@@ -205,7 +205,7 @@ export const siteCopy = {
         photographers: "ფოტოგრაფები",
         videographers: "ვიდეოგრაფები",
         bands: "ბენდები",
-        djs: "DJs",
+        djs: "DJ",
         presenters: "წამყვანები",
         halls: "დარბაზები",
         "rental-cars": "გასაქირავებელი მანქანები",

@@ -14,7 +14,8 @@ export function HomePage() {
   const copy = siteCopy[language]
   const { categories, items, isLoading, error } = useHomeListings()
 
-  const sortedItems = sortListingsVipFirst(items, language)
+  const vipItems = items.filter((item) => item.vip)
+  const sortedItems = sortListingsVipFirst(vipItems, language)
 
   return (
     <div className="home-page">

@@ -7,21 +7,14 @@ import { ListingGrid } from '../components/home/listing-grid.jsx'
 import { siteCopy } from '../content/site-copy.js'
 import { useHomeListings } from '../hooks/use-home-listings.js'
 import { useAppPreferences } from '../state/app-preferences.js'
-import { getLocalizedValue } from '../utils/get-localized-value.js'
+import { sortListingsVipFirst } from '../utils/sort-listings-vip-first.js'
 
 export function HomePage() {
   const { language } = useAppPreferences()
   const copy = siteCopy[language]
   const { categories, items, isLoading, error } = useHomeListings()
 
-  const vipItems = items.filter((item) => item.vip)
-
-  const sortedItems = [...vipItems].sort((leftItem, rightItem) =>
-    getLocalizedValue(leftItem.title, language).localeCompare(
-      getLocalizedValue(rightItem.title, language),
-      language,
-    ),
-  )
+  const sortedItems = sortListingsVipFirst(items, language)
 
   return (
     <div className="home-page">

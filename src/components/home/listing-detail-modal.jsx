@@ -64,15 +64,17 @@ export function ListingDetailModal({ item, language, onClose }) {
   const city = getLocalizedValue(item.city, language)
   const categoryName = item.categoryName[language]
   const isSaved = isInWishlist(item.id)
-  const isPhotographer = item.categoryId === 'photographers'
+  const supportsGallery = ['photographers', 'rental-cars'].includes(
+    item.categoryId,
+  )
   const supportsLinks = [
     'bands',
     'djs',
     'photographers',
     'videographers',
   ].includes(item.categoryId)
-  const galleryImages = isPhotographer ? item.photos.filter(Boolean) : []
-  const viewerImages = isPhotographer
+  const galleryImages = supportsGallery ? item.photos.filter(Boolean) : []
+  const viewerImages = supportsGallery
     ? [item.imageUrl, ...galleryImages].filter(Boolean)
     : [item.imageUrl].filter(Boolean)
   const profileImageOffset = item.imageUrl ? 1 : 0
@@ -140,7 +142,7 @@ export function ListingDetailModal({ item, language, onClose }) {
 
         <div className="listing-detail-modal__media">
           {selectedImage ? (
-            isPhotographer ? (
+            supportsGallery ? (
               <button
                 type="button"
                 className="listing-detail-modal__expand"
@@ -206,7 +208,7 @@ export function ListingDetailModal({ item, language, onClose }) {
           ) : null}
         </div>
 
-        {isPhotographer && galleryImages.length > 0 ? (
+        {supportsGallery && galleryImages.length > 0 ? (
           <div className="listing-detail-modal__gallery">
             <p>{copy.gallery}</p>
             <div>
@@ -223,6 +225,8 @@ export function ListingDetailModal({ item, language, onClose }) {
                         : ''
                     }
                     aria-label={copy.openImage.replace('{number}', index + 1)}
+                    onMouseEnter={() => setSelectedImageIndex(viewerIndex)}
+                    onFocus={() => setSelectedImageIndex(viewerIndex)}
                     onClick={() => {
                       setSelectedImageIndex(viewerIndex)
                       setExpandedImageIndex(viewerIndex)

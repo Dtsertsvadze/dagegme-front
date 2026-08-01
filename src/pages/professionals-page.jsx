@@ -2,7 +2,7 @@ import { ListingGrid } from '../components/home/listing-grid.jsx'
 import { siteCopy } from '../content/site-copy.js'
 import { useHomeListings } from '../hooks/use-home-listings.js'
 import { useAppPreferences } from '../state/app-preferences.js'
-import { getLocalizedValue } from '../utils/get-localized-value.js'
+import { sortListingsVipFirst } from '../utils/sort-listings-vip-first.js'
 
 export function ProfessionalsPage() {
   const { language } = useAppPreferences()
@@ -33,14 +33,10 @@ export function ProfessionalsPage() {
       {!isLoading && !error ? (
         <div className="professionals-rows">
           {categories.map((category) => {
-            const categoryItems = items
-              .filter((item) => item.categoryId === category.id)
-              .sort((leftItem, rightItem) =>
-                getLocalizedValue(leftItem.title, language).localeCompare(
-                  getLocalizedValue(rightItem.title, language),
-                  language,
-                ),
-              )
+            const categoryItems = sortListingsVipFirst(
+              items.filter((item) => item.categoryId === category.id),
+              language,
+            )
 
             if (categoryItems.length === 0) {
               return null

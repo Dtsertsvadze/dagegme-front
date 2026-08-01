@@ -8,6 +8,8 @@ const LINK_CATEGORY_IDS = new Set([
   'videographers',
 ])
 
+const GALLERY_CATEGORY_IDS = new Set(['photographers', 'rental-cars'])
+
 function normalizeLinks(links) {
   if (typeof links === 'string') {
     try {
@@ -92,8 +94,9 @@ function normalizeListing(category, item) {
     href: links[0] || '',
     links,
     vip: Boolean(item.vip),
-    photos:
-      category.id === 'photographers' ? normalizePhotos(item.photos) : [],
+    photos: GALLERY_CATEGORY_IDS.has(category.id)
+      ? normalizePhotos(item.photos)
+      : [],
     raw: item,
   }
 }

@@ -1,5 +1,14 @@
 # React + Vite
 
+## Listing image guidelines
+
+- Upload profile and gallery images at **1600 × 1200 px (4:3)**.
+- Use **1200 × 900 px** as the minimum recommended resolution.
+- Prefer WebP or JPEG in the sRGB color space and keep each file below 2 MB.
+- Keep the subject centered with a small safe margin around the edges.
+- Other image proportions are displayed in full, but may have neutral space around
+  them so the website does not crop the image.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

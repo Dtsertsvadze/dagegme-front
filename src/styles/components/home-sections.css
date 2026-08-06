@@ -303,7 +303,11 @@
 
 .listing-card__media {
   position: relative;
-  height: 138px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   background:
     radial-gradient(circle at top, rgba(124, 77, 255, 0.12), transparent 55%),
     var(--color-surface-muted);
@@ -316,7 +320,7 @@
 }
 
 .listing-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -781,6 +785,10 @@
 }
 
 @media (max-width: 1180px) {
+  .listing-card {
+    flex-basis: calc((100% - 42px) / 4);
+  }
+
   .category-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -792,6 +800,10 @@
 }
 
 @media (max-width: 900px) {
+  .listing-card {
+    flex-basis: calc((100% - 28px) / 3);
+  }
+
   .process-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 26px;
@@ -852,10 +864,6 @@
   .listing-card {
     flex-basis: 100%;
     border-radius: 18px;
-  }
-
-  .listing-card__media {
-    height: 152px;
   }
 
   .listing-card__body {

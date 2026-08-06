@@ -52,7 +52,7 @@
   align-self: start;
   width: 100%;
   min-height: 0;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background:
     radial-gradient(circle at top, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent 52%),
@@ -66,7 +66,7 @@
   width: 100%;
   height: 100%;
   min-height: 0;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .listing-detail-modal__expand {
@@ -237,12 +237,12 @@
 .listing-detail-modal__gallery > div {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-auto-rows: 82px;
   gap: 9px;
 }
 
 .listing-detail-modal__gallery button {
   position: relative;
+  aspect-ratio: 4 / 3;
   min-width: 0;
   padding: 0;
   overflow: hidden;
@@ -257,11 +257,6 @@
     transform 160ms ease;
 }
 
-.listing-detail-modal__gallery button:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
 .listing-detail-modal__gallery button:hover,
 .listing-detail-modal__gallery-item--active {
   border-color: var(--color-accent) !important;
@@ -273,7 +268,7 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .photographer-lightbox {
@@ -308,9 +303,11 @@
 
 .photographer-lightbox figure img {
   display: block;
-  max-width: 100%;
-  max-height: calc(100% - 58px);
+  width: 100%;
+  height: calc(100% - 58px);
+  min-height: 0;
   border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
   object-fit: contain;
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
 }
@@ -436,7 +433,6 @@
 
   .listing-detail-modal__gallery > div {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-auto-rows: 86px;
   }
 
   .photographer-lightbox {

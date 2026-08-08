@@ -78,9 +78,8 @@ export function ListingDetailModal({ item, language, onClose }) {
     ? [item.imageUrl, ...galleryImages].filter(Boolean)
     : [item.imageUrl].filter(Boolean)
   const profileImageOffset = item.imageUrl ? 1 : 0
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [expandedImageIndex, setExpandedImageIndex] = useState(null)
-  const selectedImage = viewerImages[selectedImageIndex] || ''
+  const profileImage = viewerImages[0] || ''
 
   function moveExpandedImage(direction) {
     setExpandedImageIndex((currentIndex) =>
@@ -141,21 +140,21 @@ export function ListingDetailModal({ item, language, onClose }) {
         </button>
 
         <div className="listing-detail-modal__media">
-          {selectedImage ? (
+          {profileImage ? (
             supportsGallery ? (
               <button
                 type="button"
                 className="listing-detail-modal__expand"
                 aria-label={copy.expandImage}
-                onClick={() => setExpandedImageIndex(selectedImageIndex)}
+                onClick={() => setExpandedImageIndex(0)}
               >
-                <img src={selectedImage} alt={title} />
+                <img src={profileImage} alt={title} />
                 <span aria-hidden="true">
                   <ExpandIcon />
                 </span>
               </button>
             ) : (
-              <img src={selectedImage} alt={title} />
+              <img src={profileImage} alt={title} />
             )
           ) : (
             <span>{title.charAt(0)}</span>
@@ -219,18 +218,8 @@ export function ListingDetailModal({ item, language, onClose }) {
                   <button
                     type="button"
                     key={`${imageUrl}-${index}`}
-                    className={
-                      selectedImageIndex === viewerIndex
-                        ? 'listing-detail-modal__gallery-item--active'
-                        : ''
-                    }
                     aria-label={copy.openImage.replace('{number}', index + 1)}
-                    onMouseEnter={() => setSelectedImageIndex(viewerIndex)}
-                    onFocus={() => setSelectedImageIndex(viewerIndex)}
-                    onClick={() => {
-                      setSelectedImageIndex(viewerIndex)
-                      setExpandedImageIndex(viewerIndex)
-                    }}
+                    onClick={() => setExpandedImageIndex(viewerIndex)}
                   >
                     <img
                       src={imageUrl}

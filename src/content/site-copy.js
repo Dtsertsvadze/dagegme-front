@@ -18,7 +18,6 @@ export const siteCopy = {
     close: "Close",
     listingDetails: {
       close: "Close details",
-      city: "City",
       about: "About",
       descriptionFallback: "More details will be added soon.",
       save: "Add to wishlist",
@@ -103,10 +102,8 @@ export const siteCopy = {
       categoryPage: {
         back: "All professionals",
         subtitle: "Browse every option and save your favorites.",
-        cityLabel: "Filter by city",
-        allCities: "All cities",
         results: "{count} results",
-        empty: "No professionals have been found in this city yet.",
+        empty: "No professionals have been found yet.",
       },
     },
   },
@@ -129,7 +126,6 @@ export const siteCopy = {
     close: "დახურვა",
     listingDetails: {
       close: "დეტალების დახურვა",
-      city: "ქალაქი",
       about: "შესახებ",
       descriptionFallback: "დეტალები მალე დაემატება.",
       save: "სურვილების სიაში დამატება",
@@ -213,10 +209,8 @@ export const siteCopy = {
       categoryPage: {
         back: "ყველა პროფესიონალი",
         subtitle: "დაათვალიერე ყველა ვარიანტი და შეინახე რჩეულები.",
-        cityLabel: "ქალაქით გაფილტვრა",
-        allCities: "ყველა ქალაქი",
         results: "{count} შედეგი",
-        empty: "ამ ქალაქში პროფესიონალები ჯერ არ მოიძებნა.",
+        empty: "პროფესიონალები ჯერ არ მოიძებნა.",
       },
     },
   },

@@ -89,7 +89,6 @@ function normalizeListing(category, item) {
     categoryName: category.labels,
     title: normalizeTitle(category, item),
     description: normalizeDescription(category, item),
-    city: normalizeLocalizedField(item, 'city'),
     imageUrl: item.profile_photo_url || '',
     href: links[0] || '',
     links,

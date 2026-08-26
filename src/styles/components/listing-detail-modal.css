@@ -137,21 +137,6 @@
   letter-spacing: -0.055em;
 }
 
-.listing-detail-modal__city {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin: 14px 0 0;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: var(--color-surface-muted);
-  font-size: 0.78rem;
-}
-
-.listing-detail-modal__city span {
-  color: var(--color-text-muted);
-}
-
 .listing-detail-modal__description {
   width: 100%;
   margin-top: 28px;

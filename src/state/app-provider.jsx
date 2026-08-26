@@ -72,7 +72,6 @@ function createWishlistItem(item) {
     categoryName: item.categoryName,
     title: item.title,
     description: item.description,
-    city: item.city,
     imageUrl: item.imageUrl,
     href: item.href,
   }

@@ -61,7 +61,6 @@ export function ListingDetailModal({ item, language, onClose }) {
   const copy = siteCopy[language].listingDetails
   const title = getLocalizedValue(item.title, language)
   const description = getLocalizedValue(item.description, language)
-  const city = getLocalizedValue(item.city, language)
   const categoryName = item.categoryName[language]
   const isSaved = isInWishlist(item.id)
   const supportsGallery = ['photographers', 'rental-cars'].includes(
@@ -164,13 +163,6 @@ export function ListingDetailModal({ item, language, onClose }) {
         <div className="listing-detail-modal__content">
           <p className="listing-detail-modal__eyebrow">{categoryName}</p>
           <h2 id={`listing-detail-title-${item.id}`}>{title}</h2>
-
-          {city ? (
-            <p className="listing-detail-modal__city">
-              <span>{copy.city}</span>
-              <strong>{city}</strong>
-            </p>
-          ) : null}
 
           <div className="listing-detail-modal__description">
             <h3>{copy.about}</h3>

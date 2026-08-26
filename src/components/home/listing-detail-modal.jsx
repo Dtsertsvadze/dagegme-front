@@ -63,9 +63,12 @@ export function ListingDetailModal({ item, language, onClose }) {
   const description = getLocalizedValue(item.description, language)
   const categoryName = item.categoryName[language]
   const isSaved = isInWishlist(item.id)
-  const supportsGallery = ['photographers', 'rental-cars'].includes(
-    item.categoryId,
-  )
+  const supportsGallery = [
+    'bands',
+    'photographers',
+    'rental-cars',
+    'studios',
+  ].includes(item.categoryId)
   const supportsLinks = [
     'bands',
     'djs',

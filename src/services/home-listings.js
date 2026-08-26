@@ -8,7 +8,12 @@ const LINK_CATEGORY_IDS = new Set([
   'videographers',
 ])
 
-const GALLERY_CATEGORY_IDS = new Set(['photographers', 'rental-cars'])
+const GALLERY_CATEGORY_IDS = new Set([
+  'bands',
+  'photographers',
+  'rental-cars',
+  'studios',
+])
 
 function normalizeLinks(links) {
   if (typeof links === 'string') {

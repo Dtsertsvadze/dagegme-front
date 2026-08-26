@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useAppPreferences } from '../../state/app-preferences.js'
 import { getLocalizedValue } from '../../utils/get-localized-value.js'
 import { ListingDetailModal } from './listing-detail-modal.jsx'
@@ -70,14 +71,21 @@ export function ListingCard({ item, language }) {
           {itemDescription || fallbackDescription}
         </p>
 
-        <button
-          type="button"
-          className="listing-card__action"
-          onClick={() => setIsDetailsOpen(true)}
-        >
-          <span>{actionLabel}</span>
-          <DetailsIcon />
-        </button>
+        {item.detailsHref ? (
+          <Link className="listing-card__action" to={item.detailsHref}>
+            <span>{actionLabel}</span>
+            <DetailsIcon />
+          </Link>
+        ) : (
+          <button
+            type="button"
+            className="listing-card__action"
+            onClick={() => setIsDetailsOpen(true)}
+          >
+            <span>{actionLabel}</span>
+            <DetailsIcon />
+          </button>
+        )}
       </div>
 
       {isDetailsOpen ? (

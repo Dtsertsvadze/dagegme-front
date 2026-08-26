@@ -60,12 +60,12 @@ export const homeCategories = [
     },
   },
   {
-    id: 'halls',
-    endpoint: 'halls',
-    entityType: 'hall',
-    icon: 'hall',
+    id: 'studios',
+    endpoint: 'studios',
+    entityType: 'studio',
+    icon: 'studio',
     labels: {
-      en: 'Hall',
+      en: 'Studio',
       ka: 'სტუდია',
     },
   },

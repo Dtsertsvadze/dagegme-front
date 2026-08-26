@@ -14,7 +14,7 @@ const iconPaths = {
   mic: (
     <path d="M12 3a3 3 0 0 1 3 3v5a3 3 0 1 1-6 0V6a3 3 0 0 1 3-3Zm-5 8a5 5 0 1 0 10 0h2a7 7 0 0 1-6 6.9V21h-2v-3.1A7 7 0 0 1 5 11Z" />
   ),
-  hall: (
+  studio: (
     <path d="M4 20V9.5L12 4l8 5.5V20h-2v-8h-3v8h-2v-8h-2v8H9v-8H6v8Zm4-10h8V8.4L12 6l-4 2.4Z" />
   ),
   car: (

@@ -97,7 +97,7 @@ export const siteCopy = {
         bands: "Bands",
         djs: "DJ",
         presenters: "Presenters",
-        halls: "Halls",
+        studios: "Studios",
         "rental-cars": "Rental cars",
       },
       categoryPage: {
@@ -207,7 +207,7 @@ export const siteCopy = {
         bands: "ბენდები",
         djs: "DJ",
         presenters: "წამყვანები",
-        halls: "დარბაზები",
+        studios: "სტუდიები",
         "rental-cars": "გასაქირავებელი მანქანები",
       },
       categoryPage: {

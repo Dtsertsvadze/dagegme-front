@@ -4,7 +4,6 @@ import { homeCategories } from '../content/home-categories.js'
 import { siteCopy } from '../content/site-copy.js'
 import { useHomeListings } from '../hooks/use-home-listings.js'
 import { useAppPreferences } from '../state/app-preferences.js'
-import { sortListingsVipFirst } from '../utils/sort-listings-vip-first.js'
 
 function BackIcon() {
   return (
@@ -26,7 +25,6 @@ export function ProfessionCategoryPage() {
   }
 
   const categoryItems = items.filter((item) => item.categoryId === categoryId)
-  const sortedItems = sortListingsVipFirst(categoryItems, language)
   const categoryTitle =
     copy.categoryTitles[categoryId] || category.labels[language]
 
@@ -60,11 +58,11 @@ export function ProfessionCategoryPage() {
       {!isLoading && !error ? (
         <>
           <p className="profession-category-page__count">
-            {copy.categoryPage.results.replace('{count}', sortedItems.length)}
+            {copy.categoryPage.results.replace('{count}', categoryItems.length)}
           </p>
-          {sortedItems.length > 0 ? (
+          {categoryItems.length > 0 ? (
             <div className="professionals-listing-grid">
-              {sortedItems.map((item) => (
+              {categoryItems.map((item) => (
                 <ListingCard key={item.id} item={item} language={language} />
               ))}
             </div>

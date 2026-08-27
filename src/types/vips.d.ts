@@ -9,6 +9,7 @@ export type Provider = {
   description?: LocalizedText | string | null;
   profile_photo?: string | null;
   profile_photo_url?: string | null;
+  sort_order: number | null;
 };
 
 export type VipProviderType =

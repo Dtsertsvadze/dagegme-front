@@ -92,6 +92,7 @@ function normalizeListing(category, item) {
     href: links[0] || '',
     links,
     vip: Boolean(item.vip),
+    sortOrder: item.sort_order ?? null,
     photos: GALLERY_CATEGORY_IDS.has(category.id)
       ? normalizePhotos(item.photos)
       : [],

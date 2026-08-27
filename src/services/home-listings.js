@@ -63,13 +63,7 @@ function normalizeTitle(category, item) {
   return normalizeLocalizedField(item, 'name')
 }
 
-function normalizeDescription(category, item) {
-  if (category.id === 'rental-cars') {
-    const year = item.year ? `${item.year}` : ''
-
-    return { en: year, ka: year }
-  }
-
+function normalizeDescription(item) {
   return normalizeLocalizedField(item, 'description')
 }
 
@@ -93,7 +87,7 @@ function normalizeListing(category, item) {
     categoryId: category.id,
     categoryName: category.labels,
     title: normalizeTitle(category, item),
-    description: normalizeDescription(category, item),
+    description: normalizeDescription(item),
     imageUrl: item.profile_photo_url || '',
     href: links[0] || '',
     links,
